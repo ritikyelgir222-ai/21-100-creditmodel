@@ -1,0 +1,21 @@
+{
+  "model_name": "logistic_regression",
+  "task": "Alternative credit scoring (binary bad-risk classification)",
+  "dataset": "UCI Statlog German Credit Data (1,000 applicants)",
+  "excluded_features_fair_lending": [
+    "personal_status_sex",
+    "foreign_worker"
+  ],
+  "business_metric": "5:1 cost-weighted misclassification cost (dataset-documented)",
+  "decision_threshold": 0.19999999999999996,
+  "test_set_performance": {
+    "auc": 0.7832,
+    "precision": 0.358,
+    "recall": 0.883,
+    "business_cost": 130
+  },
+  "known_limitations": [
+    "1,000-row dataset from 1990s-era German lending market -- amounts, norms, and applicant pool do not reflect any current market and should not be used for real lending decisions.",
+    "personal_status_sex and foreign_worker excluded from features, but other features (e.g. property, housing) may carry residual correlation with protected attributes -- a real deployment would need a formal disparate-impact audit before go-live, not just feature exclusion."
+  ]
+}

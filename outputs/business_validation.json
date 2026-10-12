@@ -1,0 +1,17 @@
+{
+  "cost_matrix": {
+    "false_negative_cost": 5,
+    "false_positive_cost": 1,
+    "source": "UCI Statlog German Credit dataset documentation"
+  },
+  "selected_model": "logistic_regression",
+  "validation_business_cost": 95,
+  "test_business_cost": 130,
+  "naive_approve_all_cost": 300,
+  "cost_reduction_pct_vs_naive": 56.7,
+  "decision_threshold": 0.19999999999999996,
+  "test_auc": 0.7832142857142858,
+  "test_precision": 0.3581081081081081,
+  "test_recall": 0.8833333333333333,
+  "fairness_note": "personal_status_sex and foreign_worker were structurally excluded from all features prior to modeling, for fair-lending compliance (see clean_and_engineer.py)."
+}
